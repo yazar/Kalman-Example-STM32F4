@@ -1,0 +1,249 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: YAZAR YAZICI, ADAPERA ROBOTIK, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Rulo\Desktop\KalmanExample\deneme2\MDK-ARM\deneme2.uvprojx
+Project File Date:  09/22/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'deneme2'
+compiling absOrientation.c...
+..\..\libs\absOrientation.h(25): warning:  #1-D: last line of file ends without a newline
+  #endif // SFE_LSM9DS1_H //
+..\..\libs\absOrientation.c(7): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  const float TO_DEGREES_COEFF = 1.0 / TO_RADIANS_COEFF;
+..\..\libs\absOrientation.c(29): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    float num1 = q[0] * 2.0;
+..\..\libs\absOrientation.c(30): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    float num2 = q[1] * 2.0;
+..\..\libs\absOrientation.c(31): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    float num3 = q[2] * 2.0;
+..\..\libs\absOrientation.c(42): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    float accelerationEast = (1.0 - (num5 + num6)) * pureAx + (num7 - num12) * pureAy + (num8 + num11) * pureAz;
+..\..\libs\absOrientation.c(43): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    float accelerationNorth = (num7 + num12) * pureAx + (1.0 - (num4 + num6)) * pureAy + (num9 - num10) * pureAz;
+..\..\libs\absOrientation.c(44): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    float accelerationUp = -1 * ((num8 - num11) * pureAx + (num9 + num10) * pureAy + (1.0 - (num4 + num5)) * pureAz);
+..\..\libs\absOrientation.c(13): warning:  #550-D: variable "gravity"  was set but never used
+      float gravity[3];
+..\..\libs\absOrientation.c(102): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      negYaw -= 360.0;
+..\..\libs\absOrientation.c(103): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      posYaw += 360.0;
+..\..\libs\absOrientation.c(82): warning:  #550-D: variable "myroll"  was set but never used
+  		float myroll, mypitch, myyaw;
+..\..\libs\absOrientation.c: 12 warnings, 0 errors
+compiling matrix.c...
+..\..\libs\matrix.h(27): warning:  #1-D: last line of file ends without a newline
+  #endif  
+..\..\libs\matrix.c(8): warning:  #177-D: variable "r2"  was declared but never referenced
+  	int r1 = 2,c1=2, r2=2,c2=2;
+..\..\libs\matrix.c(29): warning:  #177-D: variable "r2"  was declared but never referenced
+  	int r1 = 2,c1=2, r2=2,c2=1;
+..\..\libs\matrix.c(50): warning:  #177-D: variable "r2"  was declared but never referenced
+  	int r1 = 2,c1=1, r2=1,c2=1;
+..\..\libs\matrix.c(205): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\libs\matrix.c: 5 warnings, 0 errors
+compiling bmp280.c...
+..\..\libs\bmp280.c(342): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		*altitude = (float) (44330 * (1.0 -  pow((*pressure / 100) / 1013.25, 0.1903)));
+..\..\libs\bmp280.c(337): warning:  #177-D: variable "fixed_altitude"  was declared but never referenced
+  	uint32_t fixed_altitude;
+..\..\libs\bmp280.c: 2 warnings, 0 errors
+compiling kalmanYazar.c...
+..\..\libs\matrix.h(27): warning:  #1-D: last line of file ends without a newline
+  #endif  
+..\..\libs\kalmanYazar.h(79): warning:  #1-D: last line of file ends without a newline
+  #endif  
+..\..\libs\kalmanYazar.c(6): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    return (radian * 180.0 / M_PI);
+..\..\libs\kalmanYazar.c(9): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    return (degree * M_PI / 180.0);
+..\..\libs\kalmanYazar.c(63): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    float a = pow(sin(deltaLat/2.0), 2) +(
+..\..\libs\kalmanYazar.c(66): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+        pow(sin(deltaLon/2.0), 2));
+..\..\libs\kalmanYazar.c(67): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    float c = 2 * atan2(sqrt(a), sqrt(1.0-a));
+..\..\libs\kalmanYazar.c(98): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	float dtSquared = 0.5 * deltaSeconds * deltaSeconds;
+..\..\libs\kalmanYazar.c(276): warning:  #177-D: variable "res"  was declared but never referenced
+  	int res;
+..\..\libs\kalmanYazar.c(277): warning:  #177-D: variable "res2"  was declared but never referenced
+  	int res2;
+..\..\libs\kalmanYazar.c: 10 warnings, 0 errors
+compiling gpsParser.c...
+..\..\libs\gpsParser.h(7): warning:  #1-D: last line of file ends without a newline
+  float knot2MS(float knotSpeed);
+..\..\libs\gpsParser.c(104): warning:  #177-D: variable "str_head"  was declared but never referenced
+  		char	*str_head;
+..\..\libs\gpsParser.c(162): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+     return knotSpeed * 0.514444;  
+..\..\libs\gpsParser.c: 3 warnings, 0 errors
+compiling bno055.c...
+..\..\libs\bno055.h(293): warning:  #1295-D: Deprecated declaration bno055_reset - give arg types
+  void bno055_reset();
+..\..\libs\bno055.h(294): warning:  #1295-D: Deprecated declaration bno055_getOperationMode - give arg types
+  bno055_opmode_t bno055_getOperationMode();
+..\..\libs\bno055.h(296): warning:  #1295-D: Deprecated declaration bno055_setOperationModeConfig - give arg types
+  void bno055_setOperationModeConfig();
+..\..\libs\bno055.h(297): warning:  #1295-D: Deprecated declaration bno055_setOperationModeNDOF - give arg types
+  void bno055_setOperationModeNDOF();
+..\..\libs\bno055.h(298): warning:  #1295-D: Deprecated declaration bno055_enableExternalCrystal - give arg types
+  void bno055_enableExternalCrystal();
+..\..\libs\bno055.h(299): warning:  #1295-D: Deprecated declaration bno055_disableExternalCrystal - give arg types
+  void bno055_disableExternalCrystal();
+..\..\libs\bno055.h(300): warning:  #1295-D: Deprecated declaration bno055_setup - give arg types
+  void bno055_setup();
+..\..\libs\bno055.h(302): warning:  #1295-D: Deprecated declaration bno055_getTemp - give arg types
+  int8_t bno055_getTemp();
+..\..\libs\bno055.h(304): warning:  #1295-D: Deprecated declaration bno055_getBootloaderRevision - give arg types
+  uint8_t bno055_getBootloaderRevision();
+..\..\libs\bno055.h(305): warning:  #1295-D: Deprecated declaration bno055_getSystemStatus - give arg types
+  uint8_t bno055_getSystemStatus();
+..\..\libs\bno055.h(306): warning:  #1295-D: Deprecated declaration bno055_getSystemError - give arg types
+  uint8_t bno055_getSystemError();
+..\..\libs\bno055.h(307): warning:  #1295-D: Deprecated declaration bno055_getSWRevision - give arg types
+  int16_t bno055_getSWRevision();
+..\..\libs\bno055.h(309): warning:  #1295-D: Deprecated declaration bno055_getSelfTestResult - give arg types
+  bno055_self_test_result_t bno055_getSelfTestResult();
+..\..\libs\bno055.h(310): warning:  #1295-D: Deprecated declaration bno055_getCalibrationState - give arg types
+  bno055_calibration_state_t bno055_getCalibrationState();
+..\..\libs\bno055.h(311): warning:  #1295-D: Deprecated declaration bno055_getCalibrationData - give arg types
+  bno055_calibration_data_t bno055_getCalibrationData();
+..\..\libs\bno055.h(313): warning:  #1295-D: Deprecated declaration bno055_getVectorAccelerometer - give arg types
+  bno055_vector_t bno055_getVectorAccelerometer();
+..\..\libs\bno055.h(314): warning:  #1295-D: Deprecated declaration bno055_getVectorMagnetometer - give arg types
+  bno055_vector_t bno055_getVectorMagnetometer();
+..\..\libs\bno055.h(315): warning:  #1295-D: Deprecated declaration bno055_getVectorGyroscope - give arg types
+  bno055_vector_t bno055_getVectorGyroscope();
+..\..\libs\bno055.h(316): warning:  #1295-D: Deprecated declaration bno055_getVectorEuler - give arg types
+  bno055_vector_t bno055_getVectorEuler();
+..\..\libs\bno055.h(317): warning:  #1295-D: Deprecated declaration bno055_getVectorLinearAccel - give arg types
+  bno055_vector_t bno055_getVectorLinearAccel();
+..\..\libs\bno055.h(318): warning:  #1295-D: Deprecated declaration bno055_getVectorGravity - give arg types
+  bno055_vector_t bno055_getVectorGravity();
+..\..\libs\bno055.h(319): warning:  #1295-D: Deprecated declaration bno055_getVectorQuaternion - give arg types
+  bno055_vector_t bno055_getVectorQuaternion();
+..\..\libs\bno055.h(333): warning:  #1-D: last line of file ends without a newline
+  		
+..\..\libs\bno055.c(40): warning:  #188-D: enumerated type mixed with another type
+  	mode = mod;
+..\..\libs\bno055.c: 24 warnings, 0 errors
+compiling main.c...
+..\..\libs\matrix.h(27): warning:  #1-D: last line of file ends without a newline
+  #endif  
+..\..\libs\bno055.h(293): warning:  #1295-D: Deprecated declaration bno055_reset - give arg types
+  void bno055_reset();
+..\..\libs\bno055.h(294): warning:  #1295-D: Deprecated declaration bno055_getOperationMode - give arg types
+  bno055_opmode_t bno055_getOperationMode();
+..\..\libs\bno055.h(296): warning:  #1295-D: Deprecated declaration bno055_setOperationModeConfig - give arg types
+  void bno055_setOperationModeConfig();
+..\..\libs\bno055.h(297): warning:  #1295-D: Deprecated declaration bno055_setOperationModeNDOF - give arg types
+  void bno055_setOperationModeNDOF();
+..\..\libs\bno055.h(298): warning:  #1295-D: Deprecated declaration bno055_enableExternalCrystal - give arg types
+  void bno055_enableExternalCrystal();
+..\..\libs\bno055.h(299): warning:  #1295-D: Deprecated declaration bno055_disableExternalCrystal - give arg types
+  void bno055_disableExternalCrystal();
+..\..\libs\bno055.h(300): warning:  #1295-D: Deprecated declaration bno055_setup - give arg types
+  void bno055_setup();
+..\..\libs\bno055.h(302): warning:  #1295-D: Deprecated declaration bno055_getTemp - give arg types
+  int8_t bno055_getTemp();
+..\..\libs\bno055.h(304): warning:  #1295-D: Deprecated declaration bno055_getBootloaderRevision - give arg types
+  uint8_t bno055_getBootloaderRevision();
+..\..\libs\bno055.h(305): warning:  #1295-D: Deprecated declaration bno055_getSystemStatus - give arg types
+  uint8_t bno055_getSystemStatus();
+..\..\libs\bno055.h(306): warning:  #1295-D: Deprecated declaration bno055_getSystemError - give arg types
+  uint8_t bno055_getSystemError();
+..\..\libs\bno055.h(307): warning:  #1295-D: Deprecated declaration bno055_getSWRevision - give arg types
+  int16_t bno055_getSWRevision();
+..\..\libs\bno055.h(309): warning:  #1295-D: Deprecated declaration bno055_getSelfTestResult - give arg types
+  bno055_self_test_result_t bno055_getSelfTestResult();
+..\..\libs\bno055.h(310): warning:  #1295-D: Deprecated declaration bno055_getCalibrationState - give arg types
+  bno055_calibration_state_t bno055_getCalibrationState();
+..\..\libs\bno055.h(311): warning:  #1295-D: Deprecated declaration bno055_getCalibrationData - give arg types
+  bno055_calibration_data_t bno055_getCalibrationData();
+..\..\libs\bno055.h(313): warning:  #1295-D: Deprecated declaration bno055_getVectorAccelerometer - give arg types
+  bno055_vector_t bno055_getVectorAccelerometer();
+..\..\libs\bno055.h(314): warning:  #1295-D: Deprecated declaration bno055_getVectorMagnetometer - give arg types
+  bno055_vector_t bno055_getVectorMagnetometer();
+..\..\libs\bno055.h(315): warning:  #1295-D: Deprecated declaration bno055_getVectorGyroscope - give arg types
+  bno055_vector_t bno055_getVectorGyroscope();
+..\..\libs\bno055.h(316): warning:  #1295-D: Deprecated declaration bno055_getVectorEuler - give arg types
+  bno055_vector_t bno055_getVectorEuler();
+..\..\libs\bno055.h(317): warning:  #1295-D: Deprecated declaration bno055_getVectorLinearAccel - give arg types
+  bno055_vector_t bno055_getVectorLinearAccel();
+..\..\libs\bno055.h(318): warning:  #1295-D: Deprecated declaration bno055_getVectorGravity - give arg types
+  bno055_vector_t bno055_getVectorGravity();
+..\..\libs\bno055.h(319): warning:  #1295-D: Deprecated declaration bno055_getVectorQuaternion - give arg types
+  bno055_vector_t bno055_getVectorQuaternion();
+..\..\libs\bno055.h(333): warning:  #1-D: last line of file ends without a newline
+  		
+..\..\libs\gpsParser.h(7): warning:  #1-D: last line of file ends without a newline
+  float knot2MS(float knotSpeed);
+..\..\libs\absOrientation.h(25): warning:  #1-D: last line of file ends without a newline
+  #endif // SFE_LSM9DS1_H //
+..\..\libs\kalmanYazar.h(79): warning:  #1-D: last line of file ends without a newline
+  #endif  
+../Core/Src/main.c(89): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  float accelerometerEastStandardDeviation = ACTUAL_GRAVITY * 0.033436506994600976 ; //0.033436506994600976 idi
+../Core/Src/main.c(90): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  float accelerometerNorthStandardDeviation = ACTUAL_GRAVITY * 0.05355371135598354;
+../Core/Src/main.c(91): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  float accelerometerUpStandardDeviation = ACTUAL_GRAVITY * 0.2088683796078286;
+../Core/Src/main.c(237): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if(gpsLatitude_raw != 0.0)
+../Core/Src/main.c(240): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			h_hat = 0.5 * (gpsAltitude_raw + altitudeBMP);  
+../Core/Src/main.c: 32 warnings, 0 errors
+linking...
+Program Size: Code=28212 RO-data=1304 RW-data=388 ZI-data=2180  
+FromELF: creating hex file...
+"deneme2\deneme2.axf" - 0 Error(s), 88 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_deneme2
+  C:\Users\Rulo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Rulo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Build Time Elapsed:  00:00:15
+</pre>
+</body>
+</html>
